@@ -1,0 +1,1129 @@
+
+CODES FOR SLAVE DATABASE
+
+
+DOCDATE		Type:  Date				Width: 8
+		Date of document or file.
+			Numeric date format:  17890714
+
+YEAR			Type:  Numeric				Width: 4
+		Year of DOCDATE.
+
+DOCNO		Type:  Character				Width: 6
+		Document number, from document.
+
+NOTARY		Type:  Character (verbatim)	Width: 20
+		Name of notary and other retrieval information.
+
+CODER		Type: Numeric	Width: 2
+			01 = Gwendolyn Hall
+			02 = Ulysses Ricard
+			03 = Philip McLeod
+			04 = Mabel Macias
+			05 = Osvaldo Ortega
+			06 = Gregory Osborne
+			09 = Peter Caron
+
+DATEINV		Type:  Date				Width: 8
+		Date of inventory.
+			Date format.
+
+DATESALE		Type:  Date				Width: 8
+		Date of sale.
+			Date format.
+
+DEPOT		Type: Numeric	Width: 2
+		Depository in which this document is housed.
+
+			0 = housed in parish courthouses.
+			40 = Archivo General de Indias, Seville, Spain.
+41 = Archives Coloniales de France, Aix-en-Provence, France.
+			42 = Louisiana Historical Center, New Orleans.
+			43 = Louisiana Historical Quarterly.
+			44 = New Orleans Public Library
+45 = Parsons Collection/Natchez Trace Collection,   University of Texas, Austin.
+			46 = Louisiana State Archives, Baton Rouge
+47 = Spanish West Florida Papers.  Originals in East Baton Rouge courthouse, well indexed, good translations published in English, at Louisiana Historical Center and Tulane University.
+48 = Hill Library, Louisiana State University, Baton Rouge.
+	50 = Patrick Manning, Sacramental Records, Archives of Archdiocese of New Orleans.
+51 = Patrick Manning, Sacramental Records, Point Coupee Parish, Catholic Life Center, Baton Rouge.
+52 = Patrick Manning, Sacramental Records at Catholic Church in Opelousas, LA.
+	53 = Patrick Manning,Sacramental Records, Ascension Parish, Catholic Life Center, Baton Rouge.
+54 = Fondos de las Floridas, Havana, microfilms at Historic New Orleans Collection.
+55 = Gwendolyn Hall, Africans in Colonial Louisiana.
+56 = Emily Clark, Ursuline Convent Archives, New Orleans.
+57 = Eltis et al, the Atlantic Slave Trade Database: a Compact Disk Publication.
+			58 = Glenn Conrad, Attakapas County Records.
+	
+LOCATION		Type: Numeric	Width: 2
+		Standardized location, accounting for parish and post
+			 1  St. Bernard
+			 2  Plaquemines
+			 3  Orleans (including Chapitoulas).
+				[Jefferson 1825]
+			 4  Lafourche.  [Terrebonne 1822]
+			 5  Assumption
+			 6  St. Charles (old German Coast)
+			 7  St. John the Baptist (new German Coast)
+			 8  St. James (including Acadians)
+			 9  Ascension (including Acadians)
+			11  Iberville
+			12  St. Martin (Attakapas Post).  [St. Mary 1811,
+				Lafayette 1823, Vermillion 1844, Iberia 1868]
+			13  St. Mary (1811)
+			14  St. Landry (Opelousas Post).  [Calcasieu 				1840, Cameron 1870, Acadia 1886, Evangeline
+				1908, Allen 1910, Jefferson Davis 1912, 				Beaureguard 1912]
+			15  Pointe Coupee
+			16  Avoyelles
+			17  West Baton Rouge
+			20  Natchitoches.  [Claiborne 1828, Caddo 1838,
+				Bossier 1843, DeSoto 1843, Sabine 1843,
+				Bienville 1848, Red River 1871, Webster 1871]
+			21  Rapides.  [Brant, Vernon 1871]
+			23  Catahoula (1808)
+			24  Ouachita.  [Union 1839, Morehouse 1844, 				Jackson 1845, Richland 1868, Lincoln 1873,
+				West Carroll 1877]
+25  East Baton Rouge.  Includes Spanish West Florida Papers
+26  Feliciana.  Includes Spanish West Florida Papers. Separated into East Feliciana and West Feliciana in 1824.
+			27  Manchak.  Spanish West Florida Papers	
+28  St. Tammany. Included what is now Washington Parish(1819)and Tangipahoa Parish(1869).
+29  St. Helena.  Includes Spanish West Florida papers.
+			30  Mobile (Alabama)
+			31  Pensacola (Fla.)
+			32  Natchez (Miss)
+			33  Arkansas
+			34  Illinois
+			35  Concordia
+			36  Red River
+			47  Mississippi
+		
+DOCTYPE		Type: Numeric				Width: 2
+		Type of document.
+			01 = estate inventory
+			02 = estate sale			
+			07 = sale which does not involve probate
+			08 = criminal litigation
+			09 = other litigation
+			10 = mortgage
+			11 = marriage contract
+			12 = will
+			13 = seizure for debt
+			14 = confiscation in criminal proceedings
+			15 = reports of a runaway
+			18 = miscellaneous
+			22 = list, as in census or taxation list. 
+			24 = testimony of slaves
+			25 = Atlantic slave trade
+		
+MAROON	Numeric					Width: 1
+
+			Any documents involving maroons, including reports of runaways, interrogation of captured runaways, and testimony by slaves about runaways.
+				1 = yes.
+
+REVOLTSType: numeric				Width: 1
+
+This slave was involved in a conspiracy or a revolt against slavery.
+
+
+LANGUAGE		Type: numeric				Width: 2
+		Language of this record.
+			1  French
+			2  Spanish
+			3  English
+			
+AFLANG:Type: numeric				Width: 2
+		Language group of Africans.
+			1  West Atlantic
+			2  Mande
+			3  Gur
+			4  Kwa
+			5  Gbe(Fon/Arada/Aja/Mina)
+			6  Adamawa-Eastern
+			7  Afro-Asiatic
+			8  Central Sudanic
+			9  Unidentified
+		    12  Benue-Congo
+		    14  typonym, language group unclear
+		   
+		   
+		   		   	
+LINGUISTIC	Type: Numeric				Width: 1
+		Is this record of linguistic interest?
+			1 = yes.
+
+			
+FREE			Type: Numeric				Width:  1
+		Is there a free person of African descent involved in 		this document?
+			1 = yes.
+
+ESTATEFREEType: Numeric				Width:   1
+Is this the inventory or sale of an estate of a free person of African descent?
+			1 = yes.
+
+ESTATE_OF		Type:  Character (verbatim)	Width: 20
+		Last name of deceased.  For probate documents.
+
+FIRSTNAME		Type:  Character (verbatim)	Width: 20
+		First name of deceased. For probate documents.
+
+ESTATE		Type:  Character (verbatim)	Width: 17
+Distinct estate number for each estate inventory or estate sale (DOCTYPE = 01 or 02); or sale of an entire estate including all its slaves = (some doctype 7).
+
+For example, "03-S-XXX-123-1799" means an estate in Orleans Parish during the Spanish period containing 123 slaves and inventoried in 1799. XXX represents a unique estate number for each location and period (French, Spanish, Early American). If estate inventories and estate sales are in the same document or the estate sale takes place shortly after inventory, slaves from these estates were entered only once with both inventory and sale price listed in one record. These unique estate numbers are entered for each slave inventoried and/or sold in these documents.
+		
+ESTATEPOP		Type: Numeric			Width: 3
+Number of slaves on the estates when a complete list of slaves was contained in the document. Estatepop is entered into only one record for each estate.
+
+SELLER		Type:  Character (verbatim)  	Width: 20
+		Last name of seller of slave.
+
+FIRST1		Type:  Character (verbatim)	Width: 20
+		First name of seller of slave.
+
+BUYER		Type:  Character (verbatim)	Width: 20
+		Last name of buyer of slave.
+
+FIRST2		Type:  Character (verbatim)	Width: 20
+		First name of buyer of slave.
+
+
+WENT:Type: Numeric				Width: 2 	
+
+Where the slave went when place of residence of buyer was indicated.  Same codes as for STPORT.
+	
+
+NAMEXPLAIN.  Type: Character (verbatim)	Width: 254
+This gives information, including sometimes the meaning of the African names of slaves. Incompletely coded.
+			
+NAME			Type:  Character (verbatim)	Width: 30
+		Name of slave in this record.  Include "dit" --
+e.g., "Moussa dit Jacques." African names recorded first.
+
+NAMETYPE Type: Numeric				Width: 1
+			
+		4 =	African
+		7 =	Partilly coded, overwhelmingly European
+		8 =	Could be African or European
+		9 =	No name supplied or name is illegible
+
+SEX			Type: Numeric				Width: 1
+		Gender of slave in this record.
+			1 = female
+			2 = male
+			9 = sex is unidentified
+
+RACE			Type: Numeric				Width: 2
+		Racial designation of slave in this record.
+			01 = grif (usually means mixed black/Indian)
+			02 = indian
+			03 = black
+			04 = mulatto
+			05 = quadroon, quarteron
+			06 = octoroon
+07 = metis (white and Indian, indeterminate mixture)
+			08 = mulatto grif
+			08 = mulatto rouge
+			08 = other, including chino
+			09 = missing
+		    
+AGE			Type:  Numeric				Width: 4.0
+		Age of slave in this record, in years, listing one 		digit past the decimal.
+If a range of years is given, the mean age:  e.g., for a slave of 30 to 35 years, 32.5 was entered.  For infants, months were round off to nearest tenth of a year.
+
+
+AGECATN		Type:  Numeric		Width:  1
+		When only age categories were indicated.
+
+			1 unborn 	
+			2 nursing 
+			3 infant 
+			4 child   
+			5 young  
+			6 adult  
+			7 old     
+			
+SKILLS		Type:  Character (verbatim)	Width: 50
+		Skills and occupations of this slave.
+Complete list of skills from document were translated into English and entered. The original language was preserved when space permitted.
+
+SKILLCAT		Type:  Numeric				Width: 3
+Primary occupation or skill of this slave. If the slave is an expert or an apprentice at any skill, code that skill first and indicate level of competence in the expert, apprentice or a little fields.
+					1 = yes.
+			
+		     AGRICULTURE:
+
+			1  commander, commandeur, mayoral, 					majordomo, Plantation manager, Driver.
+2  worker in agriculture:  laborer, laboureur, trabajador, de habitation, de place, obrero field hand, de campo or champs, soil cultivation, plowman, laboureur, labrador/labradora
+			3  various skills
+               6  plowman		
+		    11  gardener, jardinier
+
+			DOMESTIC SERVICE:
+
+		    20  wetnurse
+		    21  domestic, house, domestique, servant, 				    butler, housekeeper, serviente, domestico
+		    22  cook, cuisinier, cocinero
+		    23  laundry, ironing, blanchisseur, repasseur
+		    25  personal servant, maid, criado/criada
+
+		    27  child care
+
+POLICE AND SECURITY
+
+    29  chasseur de nègres de champ (chases runaway slaves)
+		    30  watchman, guardian, gardien, velador.
+
+FISHING AND HUNTING
+
+		    31  fisherman, pescador, pêcheur
+		    41  hunter, casador, chasseur
+
+HORSES, CATTLE LEATHER INDUSTRY
+
+		    42  tanner
+		    43  leather worker, saddler, corroyeur, apuntador
+		    44  shoemaker, cordonnier, zapatero
+		    45  butcher, boucher, carnicero 	
+		    46  cowboy, vaucher, vaquero.
+	         47  hostler, horse groomer/ horse related    
+		    48  jockey
+
+		  		FORESTRY:
+
+    51  woodsman, tree feller, bucheur, cortador de lena
+		    53  axeman, hache, hachador	
+		    54  miller, molinero, meunier
+		    55  sawyer, long sawyer
+		    56  lumber squarer, cuadrador, equarisseur
+
+
+		   LAND TRANSPORT:
+
+		    61  carter, wagoneer , carretero, charetier
+		    62  coach driver, calesero, chochero, cocher
+
+		   MARITIME:
+
+		    63  sailor, marinero, marin, batelier
+		    64  rower, rameur
+		    65  navigator
+	         66  sail maker	   
+		    67  Ship's pilot	
+		    68  Commander or patron of a boat or ship
+		    69  caulker calfate, califat	
+		    70  shipbuilder, ship's carpenter
+		    71  sounder
+
+             Industry:
+		   
+		    75  sugar worker, both field & mill, sucrier
+              76  sugar refiner, raffinador
+		    77  miner
+         78  indigo maker, anilero
+
+					MARKETING:
+
+		    81  seller, marchand, vendeur
+		    82  vegetable seller
+		    83  milk seller
+		  			CRAFTS:
+
+		    90  cotton press operator
+		    91  pitch/tar
+		    92  oven maker	
+		   100  ouvrier, implied industrial worker
+             101  carpenter, charpentier, carpintero
+		   102  mason, maçon, albanil
+		   103  roofer, cubridor?	
+		   105  brick maker, briqueur; lime maker
+		   106  wheel maker
+		   107  cart maker, charron
+		   108  cooper,(BARREL-MAKER) tonolero, tonnelier
+		   109  cabinet maker, menuisier
+		   110  blacksmith, herero, forgeron
+		   111  tinner
+		   112  tool sharpener, puntador
+		   113  locksmith
+		   114  silversmith
+		   115  goldsmith
+		   116  potter
+		   117  peluquero, barber, shaving, wig maker
+		   120  cigar maker, tobacco stemmer
+		   121  tailor, sastre, tailleur
+		   122  seamstress, costurera, couturière
+		   123  hat maker, chapelier
+		   125  baker, panador,boulanger
+		   126  confectioner, chocolate maker
+		   127  spinner, fileuse
+             128  ropemaker
+             129  maker of fine china (loza)	
+             130  painter, plasterer    
+		   132  levée worker
+ 		   133  daily worker, à la journée
+		   134  beggar	
+		   135  powder works
+		   136  gravedigger, cavador
+		   137  writing, sign name
+		   138  knows music, plays a musical instrument	
+             140  upholsterer, mattress-maker
+             141  glazer
+		   142  charcoal maker
+		   143  basket maker
+		   144  wood carver, sculptor, engraver, tallista 
+		   145  metalworker acerador
+   146  pick & Shovel (pelle), pioche, azodonero,      espiochero	
+		   148  interpreter OF languages.
+		   149  executioner 
+		   150  innkeeper, hospitality
+		   151  rum-maker, guildivier
+
+HEALTH CARE
+
+	      153  surgeon 
+		   154  curer, healer, guerriseur
+		   155  midwife, partera, sage femme.
+		   156  nurse
+		   157  hospital worker
+		   158  tooth puller, sacar muellas
+		   159  bleeder
+
+
+EXPERT		Type: Numeric				Width: 1
+		Is this person described as very good at his or
+		her primary skill?
+				1 = yes
+
+APPRENTICE	Type: Numeric				Width: 1
+		Is this person described as an apprentice or trainee?
+				1 = yes
+
+ALITTLE		Type: Numeric				Width: 1
+		Is this person described as having a little skill
+		at his or her primary occupation?
+				1 = yes
+
+SKILL2		Type:  Numeric				Width: 3
+		Secondary occupation or skill of this slave.
+			Same codes as for skillcat; blank if no more
+			than one is listed.
+
+SKILL3		Type:  Numeric				Width: 3
+		Tertiary occupation or skill of this slave.
+			Same codes as for skillcat; blank if no more
+			than two are listed.
+
+SKILL4		Type: Numeric				Width: 3
+		Fourth occupation or skill of this slave.
+			Same codes as for skillcat; blank if no more
+			than three are listed.
+
+SKILL5		Type: Numeric				Width: 3
+		Fifth occupation or skill of this slave.
+			Same codes as for skillcat; blank if no more
+			than four are listed.
+
+CHARACTER		Type:  Character (verbatim)	Width: 30
+Character of this slave as described by seller or appraiser.
+
+CHARCAT		Type:  Numeric				Width: 2
+		Characteristics of this slave, by category.
+			1  runaway, helps runaways
+			2  behavior problems, bad character in general, 				insubordinate
+			3  thief, ladron,voleur,
+			4  strong, good worker, forte, fuerte
+			5  intelligent, intelligente 
+			6  gambler
+			7  criminal behavior, in jail, accused of some 				serious crime
+			8  good character, bon sujet, etc. 
+		    10  drunkard, boracho, (also 73 under sick).
+    13  libertine, libertina, referring mainly to                sexual promiscuity.  
+									
+CHARCAT2		Type:  Numeric				Width: 2
+Second character characteristic of this slave. Same codes as for charcat. Left blank if no more than 1.
+
+CHARCAT3Type: Numeric				Width: 2
+Third character characteristic of this slave. Same codes as for charcat. Left blank if no more than 2.
+
+SICK		Type:  Character (verbatim)	Width: 30
+		Illnesses of this slave.
+			Enter exact statement of illnesses from document.
+
+SICKCAT		Type:  Numeric				Width: 2
+		Illnesses of this slave.
+
+General:
+
+	1 ill;
+	2 sickly; infirme; enfermo, enfermiso, valetudinario
+	3 weak; faible
+	4 incapacitated; incomode; incomodado
+	5 dropsy; langueur; hyrdropesia, dropsy
+		of stomach
+	8 poisoned
+
+Handicaps and Wounds:
+ 
+	11 blind; ciego
+	12 blind in one eye; borgne; tuerto
+	13 spot or hardness on eye; cloud on eye
+	14 poor sight
+	15 eye disease
+	16 deaf or hearing problems	
+17 mute or speech problems.
+	18 crippled, estropeado, baldado, enfermo de sus miebras.
+	19 missing fingers, dedo doblado
+20 hand crippled; hand sick; one hand smaller than the ther; hand burned;
+	21 hand missing
+	22 arm crippled;
+	23 arm pain;
+	24 leg amputated;
+	25 leg crippled;
+	26 lame; boiteux
+	27 leg weak;
+28 leg pain; sick legs; mal de la rodilla (knee); frostbite on legs; pierna con granos
+	29 foot or feet crippled, missing, swollen.
+	30 foot pain; frostbitten feet
+	31 humpback; jorobado; back pains
+	32 broken back		
+	33 ruptured, quebrado.		
+35 wounded; fistola; scars; scars from being whipped; cortada/cut.
+     36 toe problems
+     37 swelling
+     38 burns
+     39 broken bones of any type
+     40 shoulder problems 
+
+
+Physical Illness:
+
+	41 crippled by veins (blood vessels) 
+	42 tooth disease;
+	43 heart disease; palpitations in chest. 		
+	44 pneumonia, lung disease
+	45 asthma
+	46 gallstone
+	47 fevers
+	48 dysentery
+	49 nausea
+	50 fainting; mal de vapores; dizziness
+	51 trembling, Templor
+	52 venereal disease; galico; inflamation of testicles
+	54 incontinence
+	55 internal pains
+56 other internal ailment
+	57 breast ailment
+	58 ulcer
+	59 scrofula; lamparon
+	60 leg ulcer; llaga on legs
+	61 arm ulcer
+	62 rheumatism
+	63 leprosy; enfermedad de Lazaro						64 worms;
+	65 Guinea worm;
+	66 ringworm; teigne
+	67 other illness;
+	68 womb; menstrual problems; mal de mere mal de madre.
+	69 measles, rougeole
+	70 scurvy; escorbuto, scorbut
+	71 crabs
+	72 skin disease, vesie
+	73 drunk, boracho
+	74 old, feeble, falls, caduc, mal caduco
+     76 head aches/ migraines
+     77 disc problems
+	78 gout
+	79 stomach problems
+	80 smallpox
+
+     Mental Illness:
+
+	81 insane
+	82 imbecile
+	83 nervous crises
+	84 epilepsy, convulsions, gota coral
+	85 disoriented, aturdido
+	86 suicidal
+
+Other:
+
+	87 legless
+	88 drowned
+	89 shot
+	90 dying
+	91 unclear
+	92 killed
+	93 dead
+	94 coma
+	95 paralyzed
+	96 hemorrhoids almorrana
+	97 albino
+	98 malnutrition
+	99 fistulas	
+
+SICK2	Type:  Numeric				Width: 2
+A second illness of this slave. Coded same as sickcat.
+
+SICK3	Type:  Numeric				Width: 2
+A third illness of this slave. Coded same as sickcat.
+
+SICK4	Type:  Numeric				Width: 2
+A fourth illness of this slave. Coded same as sickcat.
+
+
+			
+SPELL		Type:  Character (verbatim)	Width: 20
+Exact spelling of African nation or of birthplace  of slave if unclear. 
+
+
+BIRTHPL		Type:	Numeric				Width:  3
+
+		Birthplace of slave
+
+	SAME CODES FOR BIRTHPL, ORDAD, ORMOM, ORIGINMATE, 
+			       ORGRANDMA, ORGRANDPA
+ 
+4    Arkansas
+5    Massachusetts
+6    Misssissippi
+10  Creole Pensacola
+11  Louisiana Creole
+12  New Orleans Creole
+13  Creole Mobile
+14  Natchez Creole
+15  British Mainland Creole
+16  Alabama
+17  Florida
+18  Georgia
+19  Illinois
+20  Kentucky
+21  Maryland
+22  Missouri
+23  New York
+24  Pennsylvania
+25  Tennessee
+26  Virginia
+27  Carolinas
+28  Rhode Island
+29  New England
+30  Native American
+31  Bermuda
+32  Curacao
+33  Cuba
+34  Santo Domingo
+35  St Domingue
+36  Guadeloupe
+37  Martinique
+38  Jamaica
+39  English
+40  Other Caribbean
+41  St Vincent
+42  Barbados
+43  English Islands
+44  Portuguese America
+45  Mexico
+46  Creole d'Amerique
+47  South America
+48  French Islands
+50  Chino
+51  Ile de France
+52  France
+53  Portguese Creole
+54  Espanol
+55  Pointe Coupee
+56  From Ship
+58  Opelousas
+59  Baton Rouge area
+61  Texas
+70  Unclear
+101 Bamana
+102 Diola
+103 Manding
+104 Moor/Nar
+105 Fulbe/Pular
+106 Wolof
+107 Serer
+109 Timbo
+111 Soninke
+112 Bobo
+114 Dan
+115 Coast of Senegal
+116 Kisi
+117 Limba
+118 Mende
+119 Soso
+120 Temne
+122 Toma
+123 Nalo
+124 Biefada
+125 Boke
+126 Gabu/Cabao
+127 Lokko
+128 Akwa
+129 Bissago
+130 Kanga
+131 Koranko
+132 Mano
+133 Vai
+134 Kwia
+135 Nima
+136 Bacoy
+137 Cahure
+138 Papelaou
+139 Barary
+140 Coular
+141 Mande/Maecaye
+142 Kouniaca
+143 Noion
+144 Corri, Cories
+145 Atoyo/Atyo/Auda
+146 Gola
+147 Bulom
+148 Marka
+149 Sara
+199 Guinea/Guinea Coast
+303 Fanti
+305 Quiaba
+306 Salaga
+308 Concha
+398 Gold Coast
+399 Coromanti
+401 Aja/Fon/Arada
+404 Konkomba
+405 Cotocoli
+407 Gwari
+408 Hausa
+409 Mina
+410 Samba
+411 Nago/Yoruba
+413 Edo
+415 Apa
+416 Bargu
+417 Nupe
+419 Adele
+420 Birom
+421 Mundu/Munga
+422 Mambila
+424 Daba
+425 Nabwa
+490 Benin
+491 Juda
+498 Juda, Port of
+501 Igbo
+502 Ibibio/Moko
+506 Bioko
+507 Ekoi
+508 Esan/Edoid
+512 Calabar
+551 Congo
+553 Teke
+554 Mandongo
+556 Louba
+557 Dimba
+558 Yoco
+559 Popma/Pomo
+560 Otango, Hotango
+561 Ngala
+562 Makonde
+563 Hyban/Ibani
+564 Isoko
+565 Ham/Hamba
+566 Bamun
+567 Bakoko/Bacoro
+568 Mayombe
+569 Buji
+570 Sango
+571 Zina
+573 Duguri
+590 Angola
+591 Gabon
+598 sold as Congo, Atlantic Slave Trade
+599 Coast of Angola
+651 Makwa
+653 Karanga
+654 Malimbo\Limbo
+655 Ranga
+656 Cenane
+695 Mozambique
+699 Nation Unidentified
+701 Africa
+703 Brut
+704 Imputed African based on age
+
+
+
+
+BRUT			Type: 	Numeric				Width: 1
+
+Is this slave listed as "brut"or "bozal," meaning newly arrived from Africa.
+			Yes = 1
+
+GROUP		Type: Numeric				Width: 1
+		
+			2 = sold or inventoried as an individual
+			3 = no prices at all
+			4 = sold or inventoried in a group
+
+INVCUR		Type:  Character (category)	Width: 1
+
+		Currency of inventory inventory or sale value.
+			p = piastre = 1 p
+			s = peso = 1 p
+			g = piastre gourde = 1.75 p
+			f = peso fuerte = 1.75 p
+			l = livre = 0.2 p
+			t = livre tournois?
+			i = pound (livre) of indigo = 1 p
+			d = U.S. dollar = 1 p
+			z = unidentified
+
+INVVALUE		Type:  Numeric				Width: 8
+		Inventory value of an individual slave or group of
+		slaves.
+
+INVVALP		Type:  Numeric				Width: 8
+		Inventory value of an individual slave or group of
+slaves. This is a common denominator price involving automatic price conversion formulas calculated by Robert A. Rosenberg, Director of the Edison Papers using the same price in alternate currencies collected from documents by Gwendolyn M. Hall.
+
+
+SALECUR		Type:  Character (category)	Width: 1
+		Currency of sale of an individual slave or group of
+		slaves. Same as for invcur above.
+			
+
+SALEVALUE		Type:  Numeric				Width: 8
+		Sale value of an individual slave or group of slaves.
+
+SALEVALP		Type:  Numeric				Width: 8
+		Sale value of an individual slave or group of slaves.
+This is a common denominator price involving automatic price conversion formulas derived as explained for INVVALP above.
+
+FAMILY_Y_N      Type: Numeric               Width: 1
+           Member of a family group = 1     
+
+FAMILY		Type:  Character (verbatim)	Width: 50
+		Describe family of this slave.
+
+
+CHILDREN		Type:  Numeric				Width: 2
+Number of children of this slave.  Coded for mother only if both parents are listed; if father and not mother is listed, coded for father.
+
+MALE			Type:  Numeric				Width: 1
+		Number of male children of this slave.
+
+FEMALE		Type:  Numeric				Width: 1
+		Number of female children of this slave.
+
+UNDER5		Type:  Numeric				Width: 1
+		Number of children under 5 of this slave.
+
+PREGNANT		Type: Numeric				Width: 1
+		Woman is pregnant = 1
+			
+
+MOTHER		Type: Numeric				Width: 1
+		Slave's mother is listed in the document.
+		1 = yes
+
+AGEMOM		Type:  Numeric				Width: 2
+		Age of mother of this slave, in years.
+
+RACEMOM		Type: Numeric				Width: 2
+		Racial designation of mother of this slave.  
+			Use codes in Race field.
+
+INVWMOM		Type: Numeric				Width: 1
+		This slave inventoried with his or her mother.
+		1 = yes	
+
+SOLDWMOM		Type: Numeric				Width: 1
+		This slave sold with his or her mother.
+		1 = yes	
+
+SPNATMOM		Type:  Character (verbatim)	Width: 20
+		Exact spelling of African nation of mother.
+
+
+ORMOM		Type: Numeric				Width: 3
+		Birthplace of mother of this slave.
+			Use codes in birthpl field.
+
+MATE			Type: Numeric				Width: 1
+		Mate indicated in the document.
+		1 = yes	
+
+MATENAME		Type:  Character (verbatim)	Width: 30
+		Name of mate of slave in this record.
+
+AGEMATE		Type:  Numeric				Width: 2
+		Age in years of mate.
+
+AGECATMATE	Type:  Character (category)	Width: 2
+		Age of mate, by category.
+			Use categories given in agecat field.
+
+RACEMATE		Type: Numeric				Width: 2
+		Racial designation of mate.
+			Use codes in race field.
+
+SPELNAMATE	Type:  Character (verbatim)	Width: 20
+		Exact spelling of mate's nation.
+
+ORIGINMATE	Type:	Numeric					Width: 3
+		Birthplace of mate.
+			Use codes in birthpl field.
+
+FATHER		Type: Numeric				Width: 1
+		Father of this slave listed in this document.
+			1 = yes
+
+AGEDAD		Type:  Numeric				Width: 2
+		Age of father of this slave, in years.
+
+RACEDAD		Type: Numeric				Width: 2
+		Racial designation of father of this slave.
+			Use codes in race field
+
+SPNADAD		Type:  Character (verbatim)	Width: 20
+		Exact spelling of African nation.
+
+ORDAD		Type: Numeric				Width: 3
+
+		Birthplace of father of this slave.
+			Use codes in birthpl field.
+
+GRANDCHILD	Type:  Numeric				Width: 2
+		Number of grandchildren of this slave.
+
+GRANDSONS		Type:  Numeric				Width: 2
+		Number of grandsons of this slave.
+
+GDAUGHTERS	Type:  Numeric				Width: 2
+		Number of granddaughters of this slave.
+
+GRANDMA		Type: Numeric				Width: 1
+		Grandmother of this slave is listed in this document.
+			1 = yes
+
+AGEGRANDMA	Type:  Numeric				Width: 2
+		Age of grandmother of this slave, in years.
+105	SPNAGM		Type:  Character (verbatim)	Width: 20
+		Exact spelling of African nation of grandmother.
+
+106	ORGRANDMA		Type: Numeric				Width: 3
+		Birthplace of grandmother of this slave. 
+			Use numeric codes in birthpl field.
+
+107	GRANPA		Type: Numeric				Width: 1
+		Grandfather of this slave listed in this document.
+			1 =yes
+
+108AGEGRANDPA	Type:  Numeric				Width: 2
+		Age of grandfather of this slave, in years.
+	
+
+110	SPNAGRPA		Type:  Character (verbatim)	Width: 20
+		Exact spelling of African nation of grandfather.
+
+111	ORGRANDPA		Type: Numeric				Width: 3
+		Birthplace of grandfather of this slave.
+			Use codes in birthpl field.
+
+112	EMANCIP		Type: Numeric				Width: 1
+		Is the slave being emancipated?
+				1 = yes
+
+113	DEAD			Type: Numeric				Width: 1
+		Slave listed as dead.
+				1 = yes
+			
+114	RUNAWAY		Type: Numeric				Width: 1
+
+		1 = Slave had actually run away.
+2 = Slave had sheltered, hidden, and or traded with a   runaway slave or slaves.
+3 = Slave testified about runaways but was not a runaway and was not involved, or accused of being involved with runaways.
+			
+
+115	ENTERPRISE	Type: Numeric				Width: 3
+
+Dominant enterprise of this property. This field is sparsely coded because of time pressures.
+
+			1  cotton 
+			2  indigo 
+			3  manufacturing
+			4  mixed farming
+			5  other rural
+			6  sugar
+			7  tobacco
+			8  timber and firewood
+			9  household 
+			10 commercial
+			11 construction
+			12 cartage
+			13 maritime trade
+			14 lumber mill
+			15 urban unspecified
+			16 rice 
+			17 corn
+			18 rural, unspecified
+			19 tannery & Leather goods
+
+MARITIME SLAVE TRADE:
+
+CAPTAIN		Type:  Character (verbatim)	Width: 20
+			Name of Captain of Ship.
+
+SHIP			Type:  Character (verbatim)	Width: 20
+			Name of ship.
+
+ARRIVEDATE	Type:  Date				Width: 8
+			Date ship arrived in Louisiana.
+
+FROMType: Character (verbatim)	Width: 20
+			Port of embarkation.
+
+STPORT: Type: Numeric 				Width: 2
+
+Slave trade place of embarkation for slaves who arrived by ship.
+
+			Same codes for WENT and VIA.		
+
+ 1    St Bernard
+ 2    Plaquemines
+ 3    Orleans
+ 4    Lafourche
+ 5    Assumption
+ 6    St Charles
+ 7    St John Baptist
+ 8    St James
+ 9    Ascension
+ 11  Iberville
+ 12  St Martin
+ 13  St Mary
+ 14  St Landry
+ 15  Pointe Coupee
+ 16  Avoyelles
+ 17  West Baton Rouge
+ 20  Natchitoches
+ 21  Rapides
+ 23  Catahoula
+ 24  Ouachita
+ 25  East Baton Rouge
+ 26  Feliciana
+ 27  Manshac
+ 28  St Tammany
+ 29  St. Helena
+ 30  Mobile
+ 31  Pensacola
+ 32  Natchez
+ 33  Arkansas
+ 34  Illinois
+ 35  Concordia
+ 36  Red River
+ 38  Virginia
+ 39  Texas
+ 40  Tennessee
+ 41  St. Domingue/Haiti
+ 43  Pennsylvania
+ 45  New York
+ 46  Missouri
+ 47  Mississippi
+ 48  Mexico
+ 49  Maryland
+ 50  Kentucky
+ 51  Jamaica
+ 52  Georgia
+ 53  Cuba
+ 54  Ohio Territory
+ 56  Washington DC 
+ 57  from docked ship
+ 58  Providence Isle
+ 59  Dominca
+ 60  Campeche
+ 61  Vera Cruz
+ 62  Havana
+ 63  Mexico City
+ 64  St. Thomas
+ 65  Martinique
+ 66  Guadeloupe
+ 67  Baracoa,Cuba
+ 68  Santo Domingo
+ 69  Apalachicola
+ 70  Florida
+ 71  Charleston
+ 72  Carolina
+ 73  S Carolina
+ 74  N Carolina
+ 75  Philadelphia
+ 76  USA
+ 77  Africa
+ 78  Baltimore
+ 79  Grenada
+ 80  British Mainland
+ 81  Port-au-Prince
+ 82  France
+ 83  Senegal
+ 84 Guinea-Pt. La Cayanna
+ 85  Bight of Benin
+ 86  W.Central Africa
+ 87  Gold Coast
+ 88  Isles de France
+ 89  Santiago de Cuba
+ 90  Norfolk
+ 92  French Islands
+ 93  Alabama
+ 94  New Jersey
+ 95  Delaware
+
+VIA: Type: Numeric			Width: 2
+
+Where the slave came from when different from birthpl. Eg., Africans who spent time in various Caribbean countries before being brought to Louisiana.  Same codes as for STPORT.
+
+
+COMMENTSType: Character	Width: 254
+
+An extremely important field giving details which were too long and varied to be coded.
+
+RECODED FIELDS IN SPSS
+
+	The following fields have been recoded for facility in making calculations:
+
+I.YEARS RECODED INTO TIME PERIOD:
+
+	A)	DECADE.  These time periods are named by the first year in the decade and end with the last year in the decade, with two exceptions:
+		5.	1720s includes 1719.
+		2.	1810 includes 1820.
+	B)FIVEYR.	YEARS ARE CLUSTERED INTO  FIVE-YEAR PERIODS.
+	C)	EPOCH.  THIS FIELD REPRESENTS TIME PERIODS OF EFFECTIVE OCCUPATION BY THE THREE MAJOR POWERS:
+		1.	French (1719-1769).
+		2.	Spanish (1770-1803).
+		3.	Early American (1804-1820).
+II.	DOCTYPES RECODED INTO ESTATES:
+	A)	ESTATE INVENTORIES AND SALES, PROBATE DOCUMENTS.
+	B)	SALES NOT INVOLVING PROBATE.
+	C)	OTHERS.  ALL OTHER TYPE DOCUMENTS.
+III.	AGE INFORMATION RECORDED AS:
+	B)	AGEGROUP.  NUMERIC AGES RECORDED INTO FIVE YEARS.
+	C)	AGECSPAN.	NUMERIC AGES RECORDED INTO CHILD, YOUNG/ADULT, AND OLD IN ACCORDANCE WITH SPANISH AGE GROUP DEFINITIONS.
+	D)	AGESPAN.  NUMERIC AGES RECODED INTO CHILD (<15), ADULT (15-49) AND OLD (50+) IN ACCORDANCE WITH SPANISH AGE GROUP CATEGORIES.	
+IV.	LOCATION.  
+	A)ORLEANS:  RECODED INTO ORLEANS OR ALL OTHER LOCATIONS.
+	B)DISTRICT:	RECODED INTO ORLEANS, RURAL LOWER MISSISSIPPI RIVER, SOUTHWEST, NATCHITOCHES, AND ALL OTHER LOCATIONS.
+V.	BIRTHPLACES.
+	A)	ORIGIN: RECODED INTO CREOLE OF LOUSIANA, AFRICAN, CARIBBEAN, ANGLO, INDIAN, AND OTHER.
+	B)AFREGION: RECODED INTO SEVEN AFRICAN REGIONS OF ORIGIN AND AFRICANS OF UNIDENTIFIED REGIONS.
+	C)AFETH: RECODED INTO SPECIFIC AFRICAN ETHNICITES FROM SEVEN AFRICAN REGIONS OF ORIGIN, ETHNICITIES WHOSE REGIONS OF ORIGIN ARE UNIDENTIFIED,  AFRICANS WHOSE AFRICAN REGION ONLY ARE KNOWN, AND SLAVES DESCRIBED AS AFRICANS WITH NO FURTHER INFORMATION ABOUT THEIR ORIGINS.
+	D)AFREQ: THE EIGHTEEN MOST FREQUENT ETHNICITIES FOUND IN THE DATABASE.
+VI.SKILLGP, SKILLGP1, SKILLGP2 ,SKILLGP2, SKILLGP3, SKILLGP4, SKILLGP5.
+	PRIMARY, SECONDARY AND OTHER SKILLS GROUPED INTO THE FOLLOWING CATEGORIES:
+Agriculture;  domestic;  security;  fishing/hunting;  horse/cattle/leather/meat; forestry/lumber;  land transport;  maritime/water transport;  industry; marketing;  crafts;  health care.	
+VII.SLAVES ARRIVING BY SEA: 
+	FIRST, SELECT Slavetra=1
+	Then in Maritime field, choose as follows:
+	A)Atlantic Slave Trade = 1. (Can also be selected as doctype 25)
+	B)	Transshipment Trade = 0. 
+	TO EXCLUDE ATLANTIC SLAVE TRADE RECORDS IN CALCULATIONS, SELECT DOCTYPE<25.
+
+
+
+24
+
+

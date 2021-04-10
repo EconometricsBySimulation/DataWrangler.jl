@@ -15068,7 +15068,7 @@ $ replace   costUSD = cost / 17     if currency == "livre"</code></pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-julia"><pre><span></span><span class="c"># DataWrangler.jl</span>
@@ -15102,45 +15102,16 @@ $ replace   costUSD = cost / 17     if currency == "livre"</code></pre>
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-LoadError: MethodError: no method matching *(::Vector{Int64}, ::Vector{Union{Missing, Float64}})
-Closest candidates are:
-  *(::Any, ::Any, <span class="ansi-red-intense-fg">::Any</span>, <span class="ansi-red-intense-fg">::Any...</span>) at operators.jl:560
-  *(::StridedVecOrMat{T} where T, <span class="ansi-red-intense-fg">::LinearAlgebra.Adjoint{var&#34;#s832&#34;, var&#34;#s831&#34;} where {var&#34;#s832&#34;, var&#34;#s831&#34;&lt;:LinearAlgebra.LQPackedQ}</span>) at C:\buildbot\worker\package_win64\build\usr\share\julia\stdlib\v1.6\LinearAlgebra\src\lq.jl:254
-  *(::StridedVecOrMat{T} where T, <span class="ansi-red-intense-fg">::LinearAlgebra.LQPackedQ</span>) at C:\buildbot\worker\package_win64\build\usr\share\julia\stdlib\v1.6\LinearAlgebra\src\lq.jl:278
-  ...
-in expression starting at In[5]:5
-
-Stacktrace:
-  [1] (::var&#34;#191#192&#34;)(353::Vector{Float64}, 351::Vector{Int64}, 352::Vector{Union{Missing, Float64}})
-    @ Main ~\.julia\packages\DataFramesMeta\94nj6\src\DataFramesMeta.jl:127
-  [2] _transformation_helper(df::DataFrame, col_idx::Vector{Int64}, fun::Function)
-    @ DataFrames ~\.julia\packages\DataFrames\3mEXm\src\abstractdataframe\selection.jl:343
-  [3] select_transform!(nc::Union{Function, Pair{var&#34;#s267&#34;, var&#34;#s266&#34;} where {var&#34;#s267&#34;&lt;:Union{Int64, AsTable, AbstractVector{Int64}}, var&#34;#s266&#34;&lt;:(Pair{var&#34;#s164&#34;, var&#34;#s163&#34;} where {var&#34;#s164&#34;&lt;:Union{Function, Type}, var&#34;#s163&#34;&lt;:Union{DataType, Symbol, AbstractVector{Symbol}}})}, Type}, df::DataFrame, newdf::DataFrame, transformed_cols::Set{Symbol}, copycols::Bool, allow_resizing_newdf::Base.RefValue{Bool})
-    @ DataFrames ~\.julia\packages\DataFrames\3mEXm\src\abstractdataframe\selection.jl:519
-  [4] _manipulate(df::DataFrame, normalized_cs::Any, copycols::Bool, keeprows::Bool)
-    @ DataFrames ~\.julia\packages\DataFrames\3mEXm\src\abstractdataframe\selection.jl:1279
-  [5] manipulate(::DataFrame, ::Any, ::Vararg{Any, N} where N; copycols::Bool, keeprows::Bool, renamecols::Bool)
-    @ DataFrames ~\.julia\packages\DataFrames\3mEXm\src\abstractdataframe\selection.jl:1209
-  [6] #select#384
-    @ ~\.julia\packages\DataFrames\3mEXm\src\abstractdataframe\selection.jl:847 [inlined]
-  [7] #transform#386
-    @ ~\.julia\packages\DataFrames\3mEXm\src\abstractdataframe\selection.jl:913 [inlined]
-  [8] transform(df::DataFrame, args::Any)
-    @ DataFrames ~\.julia\packages\DataFrames\3mEXm\src\abstractdataframe\selection.jl:913
-  [9] top-level scope
-    @ ~\.julia\packages\DataFramesMeta\94nj6\src\DataFramesMeta.jl:126
- [10] eval
-    @ .\boot.jl:360 [inlined]
- [11] eval(x::Expr)
-    @ Base.MainInclude .\client.jl:446
- [12] var&#34;@mod&#34;(__source__::LineNumberNode, __module__::Module, df::Any, args::Vararg{Any, N} where N)
-    @ Main .\In[4]:25
- [13] eval
-    @ .\boot.jl:360 [inlined]
- [14] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
-    @ Base .\loading.jl:1094</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre><span class="ansi-bold">5×6 DataFrame</span>
+<span class="ansi-bold"> Row </span>│<span class="ansi-bold"> squarefoot </span><span class="ansi-bold"> currency </span><span class="ansi-bold"> hiddenquality </span><span class="ansi-bold"> year  </span><span class="ansi-bold"> yrfactor </span><span class="ansi-bold"> cost     </span>
+<span class="ansi-bold">     </span>│<span class="ansi-black-intense-fg"> Int64      </span><span class="ansi-black-intense-fg"> String   </span><span class="ansi-black-intense-fg"> Float64       </span><span class="ansi-black-intense-fg"> Int64 </span><span class="ansi-black-intense-fg"> Float64? </span><span class="ansi-black-intense-fg"> Float64? </span>
+─────┼────────────────────────────────────────────────────────────────
+   1 │       1600  pesos          0.872846   1965      1.15   16000.0
+   2 │       1850  dollars        0.763121   1938      0.88    1200.0
+   3 │       2400  pesos          1.48869    1904      0.54   19000.0
+   4 │       1850  livre          0.989858   1930      0.8    25500.0
+   5 │       1000  dollars        0.925211   1939      0.89     800.0</pre>
 </div>
 </div>
 
